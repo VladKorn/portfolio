@@ -1,0 +1,42 @@
+.Products{
+	width: 100%;
+	background-color: hsl(210 50% 95% / 1);
+	padding: 5px;
+	
+}
+.Products .item{
+	display: flex;
+	/* grid-template-rows: 1; */
+	/* grid-template-columns: 40px 1fr 1fr 1fr; */
+	width: 100%;
+	margin-bottom: 3px;
+}
+.Products .item .cell{
+	/* flex-basis: ; */
+	margin-right: 5px;
+	display: flex;
+    align-items: center;
+}
+.Products .item .cell.total{
+	min-width: 50px;
+}
+	.Products .item .cell.name{
+	flex-grow: 1;
+	min-width: 180px;
+}
+.Products--Add{
+	display: flex;
+	margin-bottom: 10px;
+}
+.Products--Add >*{
+	margin-right: 5px !important;
+}
+.Products--Add-id{
+	min-width: 40px;
+
+}
+.Products--Add .ant-form.ant-form-inline{
+	flex-wrap: nowrap;
+	max-width: calc(100% - 51px);
+
+}

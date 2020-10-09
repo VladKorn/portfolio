@@ -1,0 +1,76 @@
+.MobileApps {
+	color: white;
+	background-size: cover;
+	height: 44rem;
+	background-position: center;
+}
+.MobileApps .container {
+	height: 44rem;
+
+	display: flex;
+}
+.MobileApps .wrap {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.MobileApps--title {
+	font-size: 12rem;
+	color: #505665;
+	font-weight: bold;
+}
+.MobileApps p {
+	text-transform: uppercase;
+	font-size: 4.5rem;
+	font-weight: bold;
+	margin: 1rem 0;
+	margin-bottom: 4rem;
+}
+.MobileApps .links-wrap a {
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+}
+.MobileApps .MobileApps--phone {
+	margin-top: -2rem;
+	height: 46rem;
+	/* margin-bottom: -4rem; */
+}
+@media (max-width: 1000px) {
+	.MobileApps .MobileApps--phone {
+		object-fit: contain;
+		width: 38%;
+		object-position: bottom right;
+		margin-left: auto;
+		height: auto;
+	}
+}
+/* url(magdaytheme/build/static/media/MobileApps__bg.378a312f.webp) */
+@media (min-width: 600px) {
+	.MobileApps {
+		background-image: url("./MobileApps__bg.webp");
+	}
+}
+@media (max-width: 600px) {
+	.MobileApps {
+		height: auto;
+		background-size: cover;
+		max-height: none;
+		background-image: url("./MobileApps__bg_m.webp");
+
+	}
+	.MobileApps .container {
+		height: auto;
+	}
+	.MobileApps .wrap {
+	}
+	.MobileApps p {
+	}
+	.MobileApps--phone {
+		display: none;
+	}
+	.MobileApps .links-wrap {
+		display: flex;
+	}
+}

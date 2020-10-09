@@ -1,0 +1,343 @@
+.Header {
+	background-color: #fff;
+	width: 100%;
+	z-index: 10;
+}
+.Header.isFixed {
+	position: fixed;
+	animation-name: "fadeinfromtop";
+	animation-fill-mode: forwards;
+	animation-duration: 500ms;
+	box-shadow: var(--box-shadow);
+}
+
+header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+/* header .logo-wrap{ */
+.logo-wrap {
+	display: flex;
+	flex-direction: column;
+	color: inherit;
+	text-decoration: none;
+	margin-left: 0.7rem;
+}
+header.isFixed .logo-wrap {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+/* header .logo-wrap span{ */
+.logo-wrap span {
+	font-weight: bold;
+	font-size: 2rem;
+	text-decoration: underline;
+}
+/* header .logo-wrap img{ */
+.logo-wrap img {
+	margin: 1rem 0;
+}
+header .container-top {
+	/* padding-top: 2rem; */
+	/* padding-bottom: 2rem; */
+}
+header.isFixed .container-top {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.header--phone {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-right: 6.7rem;
+}
+.header--phone p {
+	color: var(--color-accent1);
+	font-weight: bold;
+	font-size: 2rem;
+	margin: 0;
+	padding-left: 6px;
+}
+.header--phone a {
+	font-size: 3rem;
+	color: var(--color-gray);
+	text-decoration: none;
+	padding: 0.4rem 0;
+	padding-left: 0.4rem;
+}
+.header--phone a b {
+	padding-left: 0.1em;
+	letter-spacing: 0.5px;
+}
+.header--phone button {
+	background: none;
+	border: none;
+	font-size: 2rem;
+	text-decoration: underline;
+}
+@media (max-width: 1000px) {
+	.header--phone {
+		margin-right: 0;
+	}
+}
+@media (max-width: 760px) {
+	header .container {
+		flex-wrap: wrap;
+	}
+	header .logo-wrap {
+		min-width: 81%;
+		margin-left: 0;
+		align-items: flex-start;
+	}
+
+	.header--phone {
+		/* flex-basis: 400px; */
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		margin-right: auto;
+	}
+	header.Basket {
+	}
+}
+
+.Header .NavByCategory {
+	color: white;
+	padding: 0;
+}
+.Header .NavByCategory ul {
+	margin: 0;
+}
+.Header .NavByCategory li {
+	font-size: 2rem;
+}
+.Header-second-line {
+	background-color: var(--color-accent3);
+}
+.Header-second-line .container {
+	display: flex;
+	padding-top: 0;
+	padding-bottom: 0;
+	align-items: flex-start;
+	max-height: 4rem;
+}
+
+.Header .NavByCategory li:hover {
+	color: white;
+}
+.Header .NavByCategory {
+}
+.Header .NavByCategory--list li {
+	margin: 0.8rem;
+}
+.Header .NavByCategory--list li::after {
+	display: none;
+}
+
+.Header .NavByWeek {
+	margin: 0;
+	padding: 0;
+	background: none;
+	flex-basis: 24rem;
+	position: relative;
+}
+.Header .NavByWeek::after {
+	content: "";
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	top: 1rem;
+	position: absolute;
+	right: 1.5rem;
+	border: solid 1px white;
+	border-top: 0;
+	border-left: 0;
+	transform: rotate(45deg);
+	transition: 300ms;
+	transition-property: "transform", "transform";
+	transition-property: "transform";
+}
+.Header .NavByWeek.is-open::after {
+	transform: rotate(-135deg);
+	margin-top: 5px;
+}
+.Header .NavByWeek .container {
+	margin: 0;
+	padding: 0;
+}
+.Header .NavByWeek ul {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: var(--color-accent3);
+	justify-content: flex-start;
+	max-height: 4rem;
+	overflow: hidden;
+	transition: 300ms;
+}
+.Header .NavByWeek.is-open ul {
+	max-height: 30rem;
+	box-shadow: var(--box-shadow);
+}
+.Header .NavByWeek ul li {
+	flex-basis: auto;
+	height: auto;
+	background: none;
+	border: none;
+	color: white;
+	text-align: left;
+	flex-shrink: 0;
+	margin: 0;
+	justify-content: flex-start;
+	padding: 0.7rem;
+	padding-left: 1.5rem;
+	height: 4rem;
+}
+.Header .NavByWeek ul li[data-isenabled="false"] {
+	opacity: 0.5;
+}
+.Header .NavByWeek ul li::after {
+	display: none;
+}
+.Header .NavByWeek.is-open ul li[data-isselected="true"] {
+	background-color: var(--color-gray);
+}
+.Header .NavByWeek:not(.is-open) ul li[data-isselected="true"] {
+	order: -1;
+}
+.Header .NavByWeek ul li span {
+	/* margin-left: auto; */
+	color: white;
+
+	display: flex;
+}
+.Header--mob-buttons-wrap {
+	display: none;
+}
+@media (max-width: 1000px) {
+	.Header.isFixed .Header--mob-buttons-wrap {
+		display: flex;
+	}
+	.Header.isFixed {
+		max-height: 7rem;
+		overflow: hidden;
+	}
+	.Header.isFixed.isOpen {
+		max-height: 77rem;
+	}
+	header.Header.isFixed .container-top {
+		margin-top: 0;
+		align-items: self-start;
+	}
+	header.Header.isFixed .container-top > * {
+		margin-top: 0.5rem;
+	}
+	.Header.isFixed .logo-wrap {
+		width: 5rem;
+		height: 4rem;
+
+		display: flex;
+		overflow: hidden;
+		min-width: 20px;
+	}
+	.Header.isFixed .logo-wrap img {
+		width: auto;
+		height: auto;
+		max-width: none;
+		max-height: none;
+		margin: auto;
+		object-fit: none;
+		width: 24rem;
+		height: auto;
+		max-width: 16rem;
+		object-position: left center;
+	}
+	.Header.isFixed .Header-second-line {
+		display: none;
+	}
+	.Header .NavByPages {
+		order: 2;
+		margin-top: 2rem;
+	}
+	.Header .header--phone button {
+		display: none;
+	}
+
+	.Header .mini-basket {
+		background-image: url("%PUBLIC_URL%/images/ico-basket.png");
+		width: 5rem;
+		height: 2.5rem;
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin-right: 1rem;
+	}
+	.Header .mini-basket--count {
+		background-color: var(--color-accent1);
+		color: white;
+		border-radius: 50%;
+		text-align: center;
+		width: 2rem;
+		height: 2rem;
+		line-height: 2rem;
+		transform: translateY(-1rem) translateX(2rem);
+	}
+	.Header .mini-basket--price {
+		margin-top: 0.7rem;
+	}
+}
+
+@media (max-width: 600px) {
+	header .container-top {
+		margin-top: 3rem;
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+	header.isFixed .container-top {
+		grid-template-columns: auto auto auto;
+		grid-template-rows: 1fr;
+	}
+	header:not(.isFixed) .logo-wrap {
+		width: 100%;
+		align-items: flex-start;
+	}
+	header:not(.isFixed) .header--phone {
+		align-items: flex-start;
+		width: 100%;
+		/* margin-bottom: 0; */
+	}
+	.NavByWeek {
+		overflow-x: auto;
+	}
+	.NavByWeek li {
+		min-width: 130px;
+	}
+	.NavByWeek li[data-isenabled="false"] {
+		display: none;
+	}
+	.NavByWeek ul {
+		/* display: block; */
+		min-width: fit-content;
+		margin-right: 15px;
+	}
+	/* .header-first-line{
+		display: flex;
+	} */
+
+	header .logo-side {
+		display: flex;
+		align-items: center;
+
+	}
+
+	header.isFixed .logo-side {
+		grid-column-end: 4;
+		grid-row-start: 1;
+		margin-top: 0 !important;
+	}
+	.logo-side .ico-user {
+		margin-right: 2rem;
+	}
+
+}

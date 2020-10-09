@@ -1,0 +1,12 @@
+.Breadcrumbs{
+	
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+}
+.Breadcrumbs--item{
+	color: inherit;
+	margin: 1.5rem;
+	
+}
+

@@ -1,0 +1,10 @@
+#PageUser{}
+#PageUser ul{
+	display: flex;
+	flex-direction: column;
+	margin: 2rem auto;
+	padding: 0;
+}
+#PageUser li{
+	display: flex;
+}

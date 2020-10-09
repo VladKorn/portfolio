@@ -1,0 +1,130 @@
+.ComplexDetail {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 2.6rem;
+}
+.ComplexDetail .inner-propucts {
+	position: relative;
+	padding-top: 2.4rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	flex-grow: 1;
+	flex-basis: 43.9rem;
+	grid-gap: 2.2rem;
+	padding-bottom: 5rem;
+}
+.ComplexDetail .inner-propucts::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	background-color: #f4f4f4;
+	width: 2.4rem;
+	height: 100%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.ComplexDetail .inner-propucts .item {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.ComplexDetail .inner-propucts .item img {
+	max-width: 100%;
+	height: 22rem;
+	object-fit: cover;
+	width: 100%;
+}
+.ComplexDetail .breadcrumbs {
+	padding: 1rem;
+	margin-top: 6.5rem;
+	width: 100%;
+	margin-top: 0;
+}
+.ComplexDetail .inner-propucts--item-title {
+	font-size: 2.6rem;
+	color: var(--color-accent1);
+	margin-top: 1.6rem;
+
+	display: flex;
+	line-height: 2.4rem;
+	align-items: center;
+	min-height: 2em;
+	margin-left: 1rem;
+	margin-bottom: 1.8rem;
+}
+.ComplexDetail .inner-propucts--info {
+	font-size: 1.6rem;
+	font-weight: bold;
+	margin-left: 1rem;
+	margin-bottom: 0.4rem;
+}
+.inner-propucts--description {
+	margin-left: 1rem;
+	line-height: 2rem;
+	margin-bottom: 0.8rem;
+}
+.inner-propucts--description p {
+	margin: 0;
+}
+/*  */
+.ComplexDetail--info-wrap {
+	flex-grow: 1;
+	flex-basis: 30rem;
+	position: relative;
+	overflow: hidden;
+	background-color: #f4f4f4;
+	padding-left: 9rem;
+	padding-right: 11rem;
+}
+.ComplexDetail--title {
+	color: var(--color-accent1);
+	font-size: 4rem;
+	margin-bottom: 3.3rem;
+}
+.ComplexDetail--title span {
+	font-size: 7rem;
+	line-height: 5rem;
+}
+.ComplexDetail--info-list {
+	padding-left: 0;
+}
+.ComplexDetail--info-list li {
+	list-style: none;
+	align-items: center;
+
+	display: flex;
+	margin-bottom: 1rem;
+}
+.ComplexDetail--info-list li > span {
+	flex-grow: 1;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+}
+.ComplexDetail--info-list li > span::before {
+	content: "";
+	display: block;
+	height: 0px;
+	border-bottom: 1px gray dashed;
+	flex-grow: 1;
+	margin: 0 1rem;
+	border-color: var(--color-gray);
+}
+.PersonsCount_text {
+	color: var(--color-accent1);
+	font-size: 3.6rem;
+	line-height: 1;
+	margin-right: 1rem;
+}
+.ComplexDetail .old-price,
+.ComplexDetail .discount {
+	font-size: 3.2rem;
+}
+
+.ComplexDetail .price {
+	font-size: 5rem;
+}

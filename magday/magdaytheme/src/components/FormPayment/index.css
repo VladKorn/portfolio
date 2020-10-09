@@ -1,0 +1,41 @@
+#sct-form-payment{
+
+}
+#sct-form-payment button[type="submit"]{
+	display: block;
+	margin: 15px auto;
+	margin-bottom: 100px;
+}
+
+
+.robokassa_pay_button {
+	height: 60px;
+	width: 310px !important;
+	text-align: right;
+	padding-bottom: 5px;
+	font-weight: 700;
+	background-color: #fff;
+	position: relative;
+	background: linear-gradient(180deg, #fff 0, #fff 50%, #eee 0, #fefefe);
+	cursor: pointer;
+	text-shadow: 1px 1px 1px #fff;
+	border-radius: 5px;
+	border: none;
+	border-right: 1px solid #d4d4d4;
+	border-left: 1px solid #e8e8e8;
+	box-shadow: 0 0 0 3px #ebebeb, inset 0 -2px 0 #cfcfcf;
+	font-size: 20px;
+	padding-right: 12px;
+}
+
+.robokassa_pay_button:after {
+    content: "";
+    left: 5px;
+    bottom: 0;
+    height: 60px;
+    width: 100px;
+    position: absolute;
+    background-image: url(https://yesbeat.ru/design/main_2/images/button_visa.png)!important;
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+}

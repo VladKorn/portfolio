@@ -1,0 +1,427 @@
+#Catalog-wrap{
+	display: flex;
+}
+#Catalog-wrap aside{
+	width: 230px;
+	padding-top: 2rem;
+	margin-right: 2rem;
+}
+
+.сomplex-сard-wrap {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	justify-items: center;
+	grid-gap: 1.5rem;
+	padding-top: 2.2rem;
+	padding-bottom: 2.9rem;
+	/* overflow: hidden; */
+	flex-grow: 1;
+	padding-top: 0;
+
+}
+.Catalog-row {
+	grid-column-end: -1;
+	grid-column-start: 1;
+	width: 100%;
+}
+.Catalog--category-title {
+	overflow: hidden;
+	display: block;
+}
+.Catalog--category-title span {
+	position: relative;
+	text-transform: uppercase;
+	background-color: var(--color-accent3);
+	color: white;
+	padding: 1rem;
+	display: inline-block;
+	width: 25rem;
+	max-width: 100%;
+}
+.Catalog--category-title span::after {
+	position: absolute;
+	content: "";
+	top: -3rem;
+	right: -1rem;
+	background-color: var(--color-accent3);
+	transform: rotate(45deg);
+	transform: rotate(45deg);
+	height: 10rem;
+	width: 10rem;
+}
+
+.Catalog--category-wrap {
+}
+/* .Catalog--items-wrap{
+	display: grid;
+	grid-template-columns: repeat( 4, 1fr);
+	grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );
+	justify-items: center;
+	justify-content: flex-start;
+	grid-gap: 1.5rem;
+	padding-top: 2.2rem;
+	padding-bottom: 2.9rem;
+	overflow: hidden;
+} 
+*/
+/* @media(max-width: 1000px){.сomplex-сard-wrap{grid-template-columns: repeat( 3, 1fr);}} */
+.сomplex-сard-wrap--show-all {
+	background-color: #fff;
+	text-transform: uppercase;
+	margin: 2.3rem auto;
+	font-size: 3.2rem;
+	
+	display: flex;
+	border: solid 1px #ececec;
+	color: var(--color-gray);
+	padding: 0.7rem;
+	line-height: 1;
+	align-items: center;
+	/* width: 566px; */
+	transform: translateX(23px);
+	box-shadow: var(--box-shadow);
+}
+.сomplex-сard-wrap--show-all .img-wrap {
+	margin: 0 3.6rem;
+}
+.сomplex-сard-wrap--show-all span:nth-child(2) {
+	border-left: solid 1px #ececec;
+	padding-left: 2.7rem;
+	padding-right: 5.4rem;
+}
+
+.CatalogCard {
+	max-width: 315px;
+	display: flex;
+	flex-direction: column;
+	--innerpadding: 1.7rem;
+	min-width: 240px;
+	width: 100%;
+
+}
+.CatalogCard[data-disabled="true"] {
+	filter: grayscale(100%);
+	position: relative;
+}
+.ComplexCard[data-disabled="true"] .head{
+	box-shadow: none;
+
+}
+.ComplexCard .head {
+	box-shadow: 2px 2px 7px 3px hsla(240, 100%, 0%, 0.14);
+	display: block;
+	padding: var(--innerpadding);
+	color: var(--color-accent1);
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 2rem;
+}
+.CatalogCard .head a{
+	text-decoration: none;
+}
+
+.ComplexCard--title {
+	font-size: 2.4rem;
+	margin-top: 0;
+	/* padding-top: 2.3rem; */
+	padding-top: 0;
+	/* padding-left: 2.6rem; */
+	line-height: 1;
+	margin-bottom: 0.8rem;
+	font-weight: bold;
+	display: block;
+	max-width: 17rem;
+	/* min-height: 5rem; */
+	margin-top: 1rem;
+	color: var(--color-accent1);
+}
+.ComplexCard--discountLabel {
+	background-color: var(--color-accent2);
+	font-weight: bold;
+	color: white;
+	font-size: 4.2rem;
+	width: 30rem;
+	position: absolute;
+	top: 0;
+	right: -8rem;
+	padding-left: 8rem;
+	text-align: center;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.ComplexCard .images-wrap {
+	--rowheight: 12.7rem;
+	display: grid;
+	grid-template-rows: var(--rowheight) var(--rowheight);
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	align-items: stretch;
+	grid-gap: 2px;
+	max-height: 500px;
+	background: linear-gradient(
+		45deg,
+		hsla(0, 0%, 90%, 1) 0%,
+		#ffffff 30%,
+		#ffffff 70%,
+		hsla(0, 0%, 90%, 1) 100%
+	);
+}
+.ComplexCard .images-wrap img {
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.ComplexCard .images-wrap.count1 .img-wrap:nth-child(1) {
+	grid-column: 1 / grid-end;
+	grid-row: 1 / 3;
+}
+.ComplexCard .images-wrap.count1 img {
+	object-fit: contain;
+}
+.ComplexCard .images-wrap img.no-image {
+	opacity: 0.5;
+	-o-object-fit: none;
+	object-fit: none;
+}
+
+.ComplexCard .images-wrap.count3 .img-wrap:nth-child(1) {
+	grid-column: 1 / grid-end;
+}
+.ComplexCard .images-wrap.count3 .img-wrap:nth-child(2) {
+	grid-row: 2 / 3;
+	grid-column: 1 / 4;
+}
+.ComplexCard .images-wrap.count3 .img-wrap:nth-child(3) {
+	grid-row: 2 / 3;
+	grid-column: 4 / grid-end;
+}
+
+.ComplexCard .images-wrap.count4 .img-wrap:nth-child(1) {
+	grid-row: 1 / 2;
+	grid-column: 1 / 4;
+}
+.ComplexCard .images-wrap.count4 .img-wrap:nth-child(2) {
+	grid-row: 1 / 2;
+	grid-column: 4 / grid-end;
+}
+.ComplexCard .images-wrap.count4 .img-wrap:nth-child(3) {
+	grid-row: 2 / 3;
+	grid-column: 1 / 4;
+}
+.ComplexCard .images-wrap.count4 .img-wrap:nth-child(4) {
+	grid-row: 2 / 3;
+	grid-column: 4 / grid-end;
+}
+
+.ComplexCard .images-wrap.count5 .img-wrap:nth-child(1) {
+	grid-row: 1 / 2;
+	grid-column: 1 / 4;
+}
+.ComplexCard .images-wrap.count5 .img-wrap:nth-child(2) {
+	grid-row: 1 / 2;
+	grid-column: 4 / grid-end;
+}
+.ComplexCard .images-wrap.count5 .img-wrap:nth-child(3) {
+	grid-row: 2 / 3;
+	grid-column: 1 / 3;
+}
+.ComplexCard .images-wrap.count5 .img-wrap:nth-child(4) {
+	grid-row: 2 / 3;
+	grid-column: 3 / 5;
+}
+.ComplexCard .images-wrap.count5 .img-wrap:nth-child(5) {
+	grid-row: 2 / 3;
+	grid-column: 5 / grid-end;
+}
+
+.ComplexCard .images-wrap.count6 {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ComplexCard .inner-list {
+	flex-grow: 1;
+	margin: 0;
+	padding: 0;
+	padding: 2.2rem var(--innerpadding);
+	padding: 0;
+	color: var(--color-textprimary);
+	min-height: 7.7rem;
+}
+
+.ComplexCard .inner-list li {
+	list-style: none;
+	display: flex;
+	margin-bottom: 0.1em;
+}
+.ComplexCard .inner-list:not(.isOpen) li:nth-child(4):not(.more) {display: none;}
+.ComplexCard .inner-list:not(.isOpen) li:nth-child(5):not(.more) {display: none;}
+.ComplexCard .inner-list:not(.isOpen) li:nth-child(6):not(.more) {display: none;}
+.ComplexCard .inner-list:not(.isOpen) li:nth-child(7):not(.more) {display: none;}
+.ComplexCard .inner-list li.more {
+	text-decoration: underline;
+	cursor: pointer;
+	font-weight: bold;
+}
+.ComplexCard .inner-list.isOpen li.more {
+	display: none;
+}
+.ComplexCard .inner-list li a {
+	color: inherit;
+	text-decoration: none;
+}
+.ComplexCard .inner-list.isSimpleProduct li {
+	display: inline-block !important;
+}
+
+
+.ComplexCard .inner-list--title {
+}
+.ComplexCard .inner-list li span {
+}
+.ComplexCard .inner-list li span:first-child {
+	flex-grow: 1;
+}
+.ComplexCard .inner-list li span:last-child:not(.inner-list--title) {
+	-ms-flex-preferred-size: 5rem;
+	flex-basis: 5rem;
+	padding-left: 1rem;
+	text-align: right;
+}
+
+.price-info-wrap {
+	padding: 0rem var(--innerpadding);
+	margin-bottom: 2rem;
+}
+.discount-value {
+	color: var(--color-accent2);
+	text-decoration: line-through;
+	font-size: 2rem;
+}
+.CatalogCard .discount {
+	color: var(--color-accent1);
+	font-size: 2rem;
+	font-weight: bold;
+}
+.price-wrap {
+	
+	display: flex;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.CatalogCard .price {
+	color: var(--color-gray);
+	font-weight: bold;
+	font-size: 3rem;
+}
+.ComplexCard--order-wrap {
+	
+	display: flex;
+	align-items: center;
+	/* padding: 0.6rem var(--innerpadding); */
+	padding: 1rem var(--innerpadding);
+	border: solid 1px var(--color-lightgray);
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+	justify-content: center;
+	margin-top: auto;
+}
+.ComplexCard--order-wrap .Counter{
+	margin-right: 15px;
+}
+.ComplexCard--tags {
+	
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1.3rem var(--innerpadding);
+	min-height: 7rem;
+}
+.ComplexCard--tags .item {
+	text-transform: uppercase;
+	color: #d8dce0;
+	font-weight: bold;
+	font-size: 1.8rem;
+	margin-right: 1rem;
+}
+/* Skeleton */
+.CatalogCardSkeleton {
+
+	height: 65rem;
+	width: 100%;
+	
+
+	/* padding-top: 3rem; */
+}
+.CatalogCardSkeleton-card{
+	width: 100%;
+	background-color: var(--color-bg);
+	box-shadow: var(--box-shadow);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2rem;
+	padding: var(--innerpadding);
+	min-height: 40rem;
+}
+
+/* asd */
+.CatalogCard[data-disabled="true"] {
+	position: relative;
+}
+.CatalogCard[data-disabled="true"]::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 200px;
+}
+
+
+
+@media(min-width: 700px){
+	#Catalog-wrap aside{
+		position: sticky;
+		top: 100px;
+		height: max-content;
+	}
+}
+@media(max-width: 700px){
+	.сomplex-сard-wrap {
+		/* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
+		grid-template-columns: 1fr 1fr !important;
+	}
+	.CatalogCard{
+		min-width: 100px;
+	}
+	#Catalog-wrap aside{
+		display: none !important;		
+	}
+
+}
+
+@media(max-width: 400px){
+	.CurrentComplexHead span{
+		font-size: 4rem;
+	}
+	.ComplexCard .head{
+		padding: 5px;
+	}
+	.ComplexCard--order-wrap{
+		flex-direction: column;
+	}
+	.ComplexCard--order-wrap .Counter{
+		margin-bottom: 2rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.ComplexCard .images-wrap{
+		--rowheight: 10rem;
+	}
+}
+
+

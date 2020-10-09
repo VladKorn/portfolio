@@ -1,0 +1,56 @@
+
+/* @import '~antd/dist/antd.dark.css'; */
+/* @import '~antd/dist/antd.compact.css'; */
+#root{
+	background-color: #f0f2f5;
+	position: relative;
+	
+}
+.App{
+	display: flex;
+	flex-wrap: wrap;
+	/* flex-direction: column; */
+	min-height: 100%;
+	width: 100%;
+	min-height: 100vh;
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: flex-start;
+}
+header{
+	/* flex-basis: 100%; */
+	width: 100%;
+	height: 100px;
+}
+main{
+	display: flex;
+	color: white;
+	flex-grow: 1;
+	/* grid-row-start: 2; */
+	/* flex-basis: 60%; */
+	width: 45%;
+
+
+}
+aside{
+	width: 45%;
+
+}
+
+.ant-table-row.ant-table-row-level-0.isActive > *{
+	background-color: hsl(0 0% 80% / 1) !important;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+.ant-table.ant-table-small .ant-table-tbody .ant-table-wrapper:only-child .ant-table{
+	/* margin-left: 40px; */
+	/* margin-left: 0px; */
+    /* width: 100%; */
+}
+.ant-table-content{
+	/* padding-right: 31px; */
+}

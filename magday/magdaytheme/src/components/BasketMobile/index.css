@@ -1,0 +1,99 @@
+.BasketMobile {
+	display: none !important;
+	background-color: hsla(0, 0%, 100%, 0.5);
+	padding: 1.5rem;
+	position: relative;
+	font-size: 1.8rem;
+	flex-basis: 37.2rem;
+	position: fixed;
+
+	left: 0;
+	width: 100wv;
+	z-index: 8;
+	display: flex;
+	align-items: center;
+
+	bottom: 0 !important;
+	top: auto;
+	left: 0;
+	background-color: #798088;
+	height: 60px;
+	color: white;
+	display: flex;
+	align-items: center;
+	width: 100vw;
+	max-width: 100%;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	flex-wrap: nowrap;
+	text-decoration: none;
+	padding: 0 1rem;
+
+	top: auto;
+	left: 0;
+	background-color: #798088;
+	height: 60px;
+	color: white;
+	display: flex;
+	align-items: center;
+	width: 100vw;
+	max-width: 100%;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	flex-wrap: nowrap;
+	font-size: 2.5rem;
+
+	/* margin-left: 5rem; */
+}
+
+.BasketMobile a,
+.BasketMobile .link {
+	color: inherit;
+}
+
+
+.BasketMobile span{
+	font-size: inherit;
+}
+ 	
+
+.BasketMobile .button {
+	/* margin-top: 1.5rem; */
+	margin-left: auto;
+}
+.BasketMobile .Basket-ico {
+	/* background-size: contain; */
+	transform: translateY(2px);
+	/* margin-right: 1rem; */
+	/* background-position: left bottom; */
+	width: 2rem;
+	height: 2rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 1rem;
+	display: flex;
+	flex-shrink: 0;
+}
+
+
+
+
+
+.BasketMobile .Basket-ico {
+	width: 3rem;
+	height: 3rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 0.8rem;
+}
+@media (max-width: 700px) {
+	.BasketMobile {
+		padding-left: 1.5rem;
+		display: flex !important;
+	}
+}
+@media (max-width: 500px) {
+	.BasketMobile .Basket-row.second a.button {
+		font-size: 2rem;
+	}
+}

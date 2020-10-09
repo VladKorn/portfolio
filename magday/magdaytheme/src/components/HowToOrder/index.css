@@ -1,0 +1,93 @@
+.HowToOrder{
+	background-image: url('../../images/bg.png');
+	background-repeat: repeat-y;
+	background-size: contain;
+	padding-top: 1.7rem;
+	padding-bottom: 5.3rem;
+	margin-top: 2.1rem;
+	color: var(--color-textsecond);
+
+	overflow: hidden;
+
+}
+.HowToOrder--title{
+	text-align: center;
+	font-size: 4rem;
+	margin: 1em 0;
+	font-weight: bold;
+	display: block;
+}
+.HowToOrder ul{
+	padding: 0;
+	margin: 0;
+	
+	display: flex;
+}
+.HowToOrder ul li{
+	-ms-flex-preferred-size: 100px;
+	    flex-basis: 100px;
+	-ms-flex-positive: 1;
+	    flex-grow: 1;
+	list-style: none;
+	position: relative;
+}
+.HowToOrder .step-number{
+	font-size: 8rem;
+	border: solid 0.5rem white;
+	
+	display: flex;
+	width: 1.1em;
+	height: 1.1em;
+	color: white;
+	border-radius: 50%;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+}
+.HowToOrder .step-number::after{
+	content: '--- > ---';
+	color: var(--color-textsecond);
+    
+    display: flex;
+    right: 0;
+    position: absolute;
+    font-size: 6.4rem;
+}
+.HowToOrder ul li:last-child .step-number::after{display: none;}
+.HowToOrder ul li .title , .HowToOrder ul li p{
+	padding-left: 3rem;
+}
+.HowToOrder ul li .title {
+	margin-top: 1.3em;
+	display: block;
+	font-weight: bold;
+	font-size: 2rem;
+
+}
+.HowToOrder p{font-size: 1.8rem;}
+
+@media(max-width: 1000px){
+	.HowToOrder .step-number::after{
+		display: none;
+	}
+	.HowToOrder ul li{
+		text-align: center;
+	}
+	.HowToOrder .step-number{
+		margin: 0 auto;
+	}
+	.HowToOrder ul li .title, .HowToOrder ul li p{
+		padding-left: 0;
+	}
+}
+@media(max-width: 600px){
+	.HowToOrder ul{
+		flex-wrap: wrap;
+	}
+	.HowToOrder ul li{
+		min-width: 130px;
+		margin-bottom: 15px;
+	}
+}
+

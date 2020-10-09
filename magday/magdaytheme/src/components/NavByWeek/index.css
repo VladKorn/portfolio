@@ -1,0 +1,232 @@
+.NavByWeek {
+	background-image: url("../../images/bg.png");
+	background-repeat: repeat-y;
+	background-size: contain;
+	max-width: 142.3rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.1rem;
+	padding: 1.2rem 0;
+	padding: 0.7rem 0;
+	margin-bottom: 2rem;
+	/* overflow: hidden; */
+}
+.NavByWeek .container {
+	display: flex;
+}
+.NavByWeek ul {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 0;
+	padding: 0;
+	flex-grow: 1;
+	margin-right: 1rem;
+}
+.NavByWeek li {
+	list-style: none;
+	margin: 3.5px;
+	flex-basis: 18rem;
+	flex-basis: 15.5rem;
+	flex-grow: 1;
+}
+/* nav li a{ */
+.NavByWeek li {
+	display: block;
+	width: 100%;
+	height: 3.6rem;
+	border: solid 1px #ececec;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	background-color: #fdfdfd;
+	cursor: default;
+	font-weight: bold;
+	font-size: 2rem;
+	position: relative;
+	box-shadow: var(--box-shadow);
+	/* cursor: pointer; */
+}
+.NavByWeek li span:not(.spt) {
+	font-weight: normal;
+	/* color: #cacfd3; */
+	font-size: 2rem;
+	padding-left: 1rem;
+}
+.NavByWeek li[data-isselected="true"]::after {
+	/* background: transparent;
+	border-color: transparent;
+	color: white; */
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: -0.7rem;
+	background-color: #798086;
+	height: 0.7rem;
+}
+.NavByWeek li[data-isenabled="false"],
+.NavByWeek li[data-isenabled="false"] span:not(.spt) {
+	background: transparent;
+	color: white;
+	font-weight: normal;
+}
+.NavByWeek li[data-isenabled="false"]{
+	flex-basis: 8rem;
+	box-shadow: none;
+
+}
+.NavByWeek li[data-isselected="true"] {
+	/* background-color: var(--color-accent3); */
+	/* border-color: var(--color-accent3); */
+	/* color: white; */
+	background-color: transparent;
+	border: none;
+	display: block;
+	text-align: left;
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: 10px;
+	box-shadow: none;
+	height: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.NavByWeek li[data-istoday="true"][data-isselected="true"] {
+	width: 230px;
+
+	min-width: 230px;
+	padding-left: 6.3rem;
+	margin-right: 1rem;
+	background-image: url("../../images/ico-menu.png");
+
+}
+.NavByWeek li[data-isselected="true"]::after{
+	content: '';
+	display: block;
+	width: 10px;
+	height: 85px;
+	background-color: #fdfdfd;
+	position: absolute;
+    left: 0px;
+    top: -20px;
+}
+.NavByWeek li[data-istoday="true"]::after{
+	display: none;
+}
+.NavByWeek li[data-isselected="true"]::before{
+	content: '';
+	display: block;
+	width: 10px;
+	height: 85px;
+	background-color: #fdfdfd;
+	position: absolute;
+    right: 0px;
+    top: -20px;
+
+}
+.NavByWeek li[data-isselected="true"] .spt{
+	color: white;
+	display: block;
+	width: 100%;
+	text-align: left;
+	font-size: 1.7rem;
+}
+.link-xml{
+	flex-basis: 15rem;
+	font-weight: bold;
+	color: white;
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+	background-image: url("../../images/download.png");
+	background-repeat: no-repeat;
+	background-position: right 5px center;
+	padding-right: 3.5rem;
+	min-width: 18rem;
+}
+.NavByWeek.notReady li:first-child{
+	flex-grow: 0;
+}
+.NavByWeek.notReady .not-ready-text{
+	flex-grow: 1;
+	color: white;
+	font-weight: bold;
+	font-size: 2rem;
+	margin: auto;
+}
+@media (max-width: 1000px) {
+	.NavByWeek li span {
+		display: none;
+	}
+}
+
+@media (max-width: 700px) {
+	.NavByWeek {
+		position: relative;
+		transition: 400ms;
+		max-height: 600px;
+		overflow-y: hidden;
+	}
+	.NavByWeek .open{
+		line-height: 1;
+		font-size: 8rem;
+		color: white;
+		width: 8rem;
+		height: 8rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		top: -4px;
+	}
+	.NavByWeek .container{
+		flex-direction: column;
+	}
+	.NavByWeek ul{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.NavByWeek li{
+		width: 100%;
+		height: auto;
+		flex-basis: auto;
+		height: 4rem;
+		margin-bottom: 1rem;
+		align-self: flex-start;
+		display: none;
+		margin-left: 0;
+		margin-right: 0;
+		
+	}
+	.NavByWeek li[data-istoday="true"]{
+		display: block;
+	}
+	.NavByWeek li[data-istoday="true"] ~ li{
+		display: flex;
+	}
+	.NavByWeek li[data-isenabled="false"]{
+		display: none !important;
+	}
+	.link-xml{
+		flex-basis: auto;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+		/* margin: 2rem; */
+		min-height: 4rem;
+	}
+
+	.NavByWeek li::before,.NavByWeek li::after{
+		display: none !important;
+	}
+	.NavByWeek:not(.isOpen){
+		max-height: 53px;
+
+	}
+
+}

@@ -1,0 +1,79 @@
+.OrderDatail {
+	/* position: sticky; */
+	/* top: 0; */
+}
+.OrderDatail ul {
+	list-style: none;
+	padding-left: 0;
+}
+.OrderDatail ul li {
+	display: flex;
+	margin-bottom: 5px;
+}
+.OrderDatail ul li > span {
+	width: 80%;
+}
+.OrderDatail ul li > span:first-child {
+	width: 20%;
+	text-align: right;
+	padding-right: 15px;
+}
+.block {
+	background-color: #fff;
+	border-radius: 2px;
+	padding: 15px;
+}
+
+.OrderDatail li.status span{
+	display: flex;
+	align-items: center;
+}
+.OrderDatail.onChangeAnimation {
+	animation-timing-function: ease-in-out;
+	animation-name: headShake;
+	animation-duration: 1000ms;
+}
+
+@keyframes headShake {
+	0% {
+		transform: translateX(0);
+	}
+
+	6.5% {
+		transform: translateX(-6px) rotateY(-9deg);
+	}
+
+	18.5% {
+		transform: translateX(5px) rotateY(7deg);
+	}
+
+	31.5% {
+		transform: translateX(-3px) rotateY(-5deg);
+	}
+
+	43.5% {
+		transform: translateX(2px) rotateY(3deg);
+	}
+
+	50% {
+		transform: translateX(0);
+	}
+}
+
+.OrderDatail.onChangeAnimation li.status {
+	animation-timing-function: ease-in-out;
+	animation-name: bgc;
+	animation-duration: 10000ms;
+	animation-fill-mode: forwards;
+}
+@keyframes bgc {
+	0% {
+		background-color: hsl(62 96% 57% / 1);
+	}
+	50% {
+		background-color: hsl(62 96% 57% / 0.5);
+	}
+	50% {
+		background-color: hsl(62 96% 57% / 0);
+	}
+}

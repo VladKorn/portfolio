@@ -1,0 +1,105 @@
+.TimeLine {
+	
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	width: 100%;
+	margin-top: 3.8rem;
+	margin-bottom: 2.1rem;
+}
+.TimeLine .info-wrap {
+	font-size: 2rem;
+	text-align: right;
+	margin-top: 2.3rem;
+	margin-left: 2rem;
+	margin-right: 5.7rem;
+}
+.TimeLine .info-wrap b {
+	color: var(--color-accent1);
+}
+.TimeLine .line-wrap {
+	flex-grow: 1;
+}
+.TimeLine .line-labels {
+	width: 100%;
+	
+	display: flex;
+	text-transform: uppercase;
+	font-size: 3rem;
+	text-align: center;
+	cursor: default;
+}
+.TimeLine .line-labels span {
+	text-align: center;
+	flex-grow: 1;
+	flex-basis: 30%;
+	padding-bottom: 2rem;
+	margin-bottom: -1.2rem;
+	z-index: 2;
+}
+.TimeLine .line-labels span:nth-child(2) {
+	border: solid 1px gray;
+	border-top: 0px;
+	border-bottom: 0px;
+	border-style: dashed;
+}
+.TimeLine .line-labels span:hover {
+	color: var(--color-accent3);
+}
+.TimeLine .line {
+	height: 1.2rem;
+	width: 100%;
+	display: flex;
+	background-color: gray;
+	position: relative;
+	/* background: linear-gradient(to right, var(--color-accent1) 33%,var(--color-accent2) 33% ,var(--color-accent2) 66.666% ,var(--color-accent3) 100%); */
+}
+.TimeLine .line span {
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+.TimeLine .line span:nth-child(1) {
+	background-color: var(--color-accent1);
+}
+.TimeLine .line span:nth-child(2) {
+	background-color: var(--color-accent2);
+}
+.TimeLine .line span:nth-child(3) {
+	background-color: var(--color-accent3);
+}
+.TimeLine .line .progress {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	height: 100%;
+	max-width: 100%;
+	background-color: #eee4d4;
+}
+.TimeLine .line .progress div {
+	top: 2.5rem;
+	left: calc(100% - 7.5px);
+	border: solid 4px var(--color-accent1);
+	width: 15px;
+	height: 15px;
+	display: block;
+	transform: rotate(45deg);
+	position: absolute;
+	border-bottom: none;
+	border-right: none;
+}
+
+@media (max-width: 600px) {
+	.TimeLine {
+		flex-wrap: wrap;
+	}
+	.TimeLine .info-wrap{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	.TimeLine .info-wrap br{
+		display: none;
+	}
+}

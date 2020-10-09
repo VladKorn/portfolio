@@ -1,0 +1,22 @@
+.NotFound{
+	width: 100%;
+	background-image: url("./404.jpg");
+	min-height: 60vw;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+}
+.NotFound .NotFound-overlay{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsla(208, 5%, 50%, 0.5);
+	width: 100%;
+	flex-direction: column;
+	
+}
+.NotFound .code{
+	color: white;
+	font-size: 8rem;
+}

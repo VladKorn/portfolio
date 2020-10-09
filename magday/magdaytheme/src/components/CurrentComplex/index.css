@@ -1,0 +1,179 @@
+.CurrentComplex {
+	background-color: var(--color-lightgray);
+	font-size: 2rem;
+}
+.CurrentComplex .container {
+	
+	display: flex;
+	align-items: flex-start;
+	padding: 1.5rem 0;
+	padding-bottom: 0;
+}
+.CurrentComplex--first-wrap,
+.CurrentComplex--main-wrap,
+.CurrentComplex--last-wrap {
+	padding: 1.5rem;
+}
+.CurrentComplex--last-wrap {
+	flex-shrink: 0;
+}
+
+.CurrentComplex--first-wrap {
+	padding-right: 5.8rem; /* asd */
+	margin-left: 1.1rem;
+}
+.CurrentComplex--first-wrap h2 {
+	font-size: 3.7rem;
+	text-transform: uppercase;
+	color: var(--color-accent1);
+	margin-top: 0;
+	line-height: 1.5;
+	margin-bottom: 1.3rem;
+}
+.CurrentComplex--first-wrap h2 span {
+	font-size: 5.9rem;
+	display: block;
+	line-height: 0.7;
+	font-weight: bold;
+}
+
+.CurrentComplex .time {
+	font-size: 3rem;
+	padding-left: 0.6rem;
+	margin-bottom: 1.3rem;
+}
+.CurrentComplex--main-wrap {
+	/* flex-shrink: 0; */
+	flex-shrink: 1;
+	flex-basis: 99rem;
+	flex-grow: 1;
+}
+.CurrentComplex--main-wrap .bottom-wrap {
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.CurrentComplex--last-wrap {
+	font-size: 2.4rem;
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.CurrentComplex--last-wrap p {
+	margin-top: 3px;
+	margin-bottom: 6px;
+}
+
+.CurrentComplex--titles {
+	font-size: 3rem;
+}
+.CurrentComplex--titles span i {
+	font-style: normal;
+	color: var(--color-accent1);
+}
+.CurrentComplex--images {
+	margin: 1.5rem 0;
+	margin-bottom: 0.4rem;
+	display: grid;
+	overflow: hidden;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 18rem;
+	gap: 2px;
+}
+.CurrentComplex--images img {
+	/* margin-right: 2px; */
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.delivery--time {
+	line-height: 1;
+	font-weight: bold;
+	font-size: 3.2rem;
+	color: var(--color-accent1);
+	background-repeat: no-repeat;
+	background-position: center right;
+	display: inline-block;
+	padding-right: 5rem;
+}
+.payment-methods-icons {
+	font-weight: bold;
+	margin-top: auto;
+	color: var(--color-accent3);
+	
+	display: flex;
+	flex-direction: column;
+}
+.payment-methods-icons img {
+	margin-top: 0.8rem;
+}
+
+.CurrentComplex .Couner {
+	margin-left: auto;
+}
+.CurrentComplex .price {
+	font-size: 3rem;
+	margin: 0 0.5rem;
+}
+.CurrentComplex .discount {
+	font-size: 2rem;
+}
+.CurrentComplex .old-price {
+	font-size: 2rem;
+}
+
+.CurrentComplex button.button.gray {
+	padding-left: 6.3rem;
+	padding-right: 6.3rem;
+	margin-left: 2rem;
+}
+
+@media (max-width: 1000px) {
+	.CurrentComplex .container {
+		flex-wrap: wrap;
+	}
+	.CurrentComplex--main-wrap {
+		order: 3;
+	}
+	.CurrentComplex--first-wrap {
+		flex-grow: 1;
+	}
+}
+
+/*  CurrentComplexHead*/
+.CurrentComplexHead {
+	/* background-size: cover; */
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.CurrentComplexHead .container {
+	min-height: 24.6rem;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.CurrentComplexHead span {
+	text-transform: uppercase;
+	font-size: 7.6rem;
+	background-color: var(--color-accent3);
+	color: white;
+	line-height: 1;
+	margin-bottom: 1rem;
+	padding: 0 0.3em;
+}
+.CurrentComplexHead span:nth-child(1) {
+	margin-top: 4rem;
+}
+.CurrentComplexHead span:nth-child(2) {
+	background-color: var(--color-accent2);
+	font-weight: bold;
+}
+@media (max-width: 600px) {
+	.CurrentComplexHead span {
+		font-size: 5rem;
+	}
+}

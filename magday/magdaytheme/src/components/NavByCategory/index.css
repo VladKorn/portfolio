@@ -1,0 +1,127 @@
+/* .NavByCategory {
+}
+.NavByCategory--list {
+	padding-left: 0;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.NavByCategory--list li {
+	list-style: none;
+	text-transform: uppercase;
+	font-size: 2.4rem;
+	margin: 1.5rem;
+	cursor: pointer;
+	transition: 300ms;
+	position: relative;
+}
+.NavByCategory--list li::after {
+	content: "";
+	opacity: 0;
+	position: absolute;
+	background-color: var(--color-accent3);
+	height: 0.4rem;
+	width: 100%;
+	left: 0;
+	bottom: -1rem;
+}
+.NavByCategory--list li:hover {
+	color: var(--color-accent3);
+}
+.NavByCategory--list li:hover::after {
+	opacity: 1;
+} */
+
+
+
+.NavByCategory ul {
+	padding: 0;
+	margin: 0;
+}
+.NavByCategory li {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	height: 6rem;
+	font-size: 2rem;
+	color: #575c60;
+	cursor: pointer;
+}
+.NavByCategory li span {
+	font-size: inherit;
+	color: inherit;
+	border-bottom: 1px solid #dcdcdc;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+.NavByCategory li img {
+	margin-right: 2rem;
+	width: 3.5rem;
+	height: 3.5rem;
+	object-fit: contain;
+	object-position: center;
+}
+.NavByCategory li.isActive  span {
+	font-weight: bold;
+}
+.NavByCategory li:hover span, .NavByCategory li.isActive  span {
+	color: 	#a8a4fd;
+}
+
+
+#Catalog-wrap .price-info-wrap{
+	position: relative;
+	min-height: 75px;
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#Catalog-wrap .preorder{
+	background-image: url('./../../images/ico-history.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+	min-width: 100px;
+	min-height: 80px;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-end;
+	position: absolute;
+    top: 0;
+    right: 0
+}
+#Catalog-wrap .preorder span:last-child{
+	color: var(--color-accent2);
+}
+
+@media(max-width: 700px){
+	#Catalog-wrap aside .line-list {
+		margin-bottom: 2rem;
+	}
+	#Catalog-wrap aside .line-list li{
+		height: auto;
+	}
+	#Catalog-wrap aside .NavByCategory li{
+		/* height: 80px; */
+
+	}
+	#Catalog-wrap .price-info-wrap{
+		min-height: 55px;
+	}
+	#Catalog-wrap .preorder{
+		position: static;
+		min-height: 10px;
+		background: none;
+		align-items: flex-start;
+		margin-top: 1rem;
+	}
+	.ComplexCard--title{
+		min-height: 40px;
+	}
+}
+

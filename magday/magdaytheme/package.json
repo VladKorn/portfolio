@@ -1,0 +1,51 @@
+{
+	"name": "magdaytheme",
+	"version": "0.5.0",
+	"private": true,
+	"dependencies": {
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.3.2",
+		"@testing-library/user-event": "^7.1.2",
+		"@types/jest": "^26.0.0",
+		"@types/luxon": "^1.24.3",
+		"@types/node": "^14.0.13",
+		"@types/react": "^16.9.36",
+		"@types/react-dom": "^16.9.8",
+		"@types/react-router-dom": "^5.1.5",
+		"libphonenumber-js": "^1.7.57",
+		"luxon": "^1.24.1",
+		"react": "^16.13.1",
+		"react-countdown": "^2.2.1",
+		"react-datetime-picker": "^3.0.2",
+		"react-dom": "^16.13.1",
+		"react-places-autocomplete": "^7.2.1",
+		"react-router": "^5.2.0",
+		"react-router-dom": "^5.2.0",
+		"react-scripts": "3.4.1",
+		"react-top-loading-bar": "^2.0.1",
+		"source-map-explorer": "^2.5.0",
+		"typescript": "^3.9.5"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"analyze": "source-map-explorer 'build/static/js/*.js'"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">5%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}

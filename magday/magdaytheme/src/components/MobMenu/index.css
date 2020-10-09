@@ -1,0 +1,50 @@
+#MobMenu{
+	display: none !important;
+}
+
+@media(max-width: 700px){
+	#MobMenu{
+	}
+	.сomplex-сard-wrap {
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	}
+	.CatalogCard{
+		min-width: 100px;
+	}
+	#MobMenu{
+		display: block !important;
+		position: fixed;
+		background-color: #fff;
+		z-index: 12;
+		right: 0;
+		top: 0;
+		max-width: 75vw;
+		width: 75vw;
+		height: 100vh;
+		/* height: 100vh; */
+		margin-right: 0;
+		padding-right: 10vw;
+		padding-left: 10vw;
+		padding-top: 7rem;
+		padding-bottom: 7rem;
+		overflow-y: auto;
+		box-shadow: var(--box-shadow);
+		transition: 400ms;
+	}
+	#MobMenu:not(.isOpen){
+		transform: translateX(800px);
+	}
+	#MobMenu .close{
+		margin-left: auto;
+		padding: 2rem;
+		padding-right: 0;
+
+	}
+	#MobMenu .aside-top{
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	
+}

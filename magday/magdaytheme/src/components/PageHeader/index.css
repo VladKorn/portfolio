@@ -1,0 +1,24 @@
+.PageHeader{
+	overflow: hidden;
+	margin-top: 0.6rem;
+	background-repeat: no-repeat;
+    background-position: center;
+}
+.PageHeader--title{
+	font-size: 7rem;
+	text-transform: uppercase;
+	font-weight: normal;
+
+	margin-top: 3.9rem;
+	margin-bottom: 3rem;
+    line-height: 6.5rem;
+    padding-left: 1rem;
+    letter-spacing: -0.1rem;
+}
+.PageHeader--descriotion{
+	max-width: 40rem;
+	padding-left: 1rem;
+	min-height: 7.9rem;
+
+}
+

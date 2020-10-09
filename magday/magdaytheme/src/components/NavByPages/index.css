@@ -1,0 +1,30 @@
+.NavByPages{
+}
+.NavByPages{
+}
+.NavByPages ul{
+	padding-left: 0;
+}
+.NavByPages .line-list li{
+	padding: 0.6rem;
+}
+.NavByPages .line-list li::before{
+	background-color: var(--color-gray)
+}
+.NavByPages .line-list li a{
+	color: inherit;
+}
+
+.NavByPages .line-list li a.active{
+	color: var(--color-accent3);
+	text-decoration: none;
+	font-weight: bold;
+}
+.isFixed .NavByPages ul{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.isFixed .NavByPages .line-list li{
+	padding: 0.3rem;
+}
+
